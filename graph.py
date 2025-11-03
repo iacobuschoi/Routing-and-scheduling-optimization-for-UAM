@@ -74,6 +74,8 @@ class Graph():
                 edgeList[node.id].append([nextNodeID,self.cost(node.id,nextNodeID)])
         return edgeList
 
+# test
+
 ## build Input ex
 # 4 4
 # 0 1
