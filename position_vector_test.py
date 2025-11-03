@@ -21,6 +21,8 @@ for i, routes in enumerate(candidateRoutes):
         print(f"t={t:.2f}: ({x:.2f}, {y:.2f})")
     print("")
 
+## test
+
 # Input EX
 # 6 8
 # 0 0
