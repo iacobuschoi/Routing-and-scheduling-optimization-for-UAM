@@ -1,6 +1,6 @@
 class MWIS:
     def __init__(self):
-        self.requestList = []
+        self.requestList = [] 
 
     def appendRequest(self, request):
         self.requestList.append(request)
@@ -26,3 +26,5 @@ class MWIS:
                     edgeList.append([i,j])
 
         return edgeList
+
+#1
