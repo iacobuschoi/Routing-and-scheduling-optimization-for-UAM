@@ -1,4 +1,4 @@
-class CandidateRoutesOfRequest:
+class RequestCandidateRoute:
     def __init__(self):
         self.positionVectorList = []
     

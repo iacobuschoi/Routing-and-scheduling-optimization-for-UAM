@@ -1,6 +1,6 @@
 from queue import PriorityQueue
 
-class Dijkstra:
+class CandidateRoute:
     def __init__(self, G, startID, destID):
         # dijkstra parameters
         self.G = G
