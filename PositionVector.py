@@ -97,7 +97,7 @@ class PositionVector():
         for s in range(steps):
             if _dist(self.vector[k_self + s], otherPositionVector.vector[k_other + s]) <= minDist:
                 # 디버깅용
-                print(self.vector[k_self + s], otherPositionVector.vector[k_other + s])
+                # print(self.vector[k_self + s], otherPositionVector.vector[k_other + s])
                 return True
         
         return False
