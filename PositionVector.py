@@ -112,24 +112,3 @@ class PositionVector():
                 return True
         
         return False
-    
-    
-
-if __name__ == "__main__":
-    class Node:
-        def __init__(self, x, y):
-            self.pos = [x, y]
-    
-    # 샘플 경로 1: (0,0) -> (100,0) -> (100, 100)
-    path1 = [Node(0, 0), Node(100, 0), Node(100, 100)]
-    pv1 = PositionVector(t_departure=0.0, path=path1)
-
-    # 샘플 경로 2: (50, -50) -> (50, 50) -> (100, 100)
-    path2 = [Node(100, 100), Node(50, -50), Node(50, 50), Node(100, 100)]
-    pv2 = PositionVector(t_departure=20.0, path=path2)
-
-    print(f"pv1.arrivedTime = {pv1.arrivedTime:.2f}")
-    print(f"pv2.arrivedTime = {pv2.arrivedTime:.2f}")
-
-    result = pv1.collision_detect(pv2)
-    print("충돌 여부:", result)
