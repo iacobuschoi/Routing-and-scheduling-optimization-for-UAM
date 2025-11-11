@@ -1,12 +1,5 @@
 import math
 
-# class ActiveFlightRoute():
-#     def __init__(self):
-#         self.positionVectorList = []
-    
-#     def append_pv(self, pv):
-#         self.positionVectorList.append(pv)
-
 class PositionVector():
     def __init__(self, t_departure, path):
         self.initTime = t_departure
@@ -55,19 +48,13 @@ class PositionVector():
 
             need = s_target - cum  # 앞으로 더 가야하는 거리 (>= 0이어야 정상)
 
-            if need < -1e-9:    # 부동소수점 오류 -> 다시 계산
-                seg_idx = 0
-                seg_trav = 0.0
-                x0, y0, x1, y1, seg_len, ux, uy = segs[seg_idx]
-                need = s_target
-
             while need > (seg_len - seg_trav) - 1e-12:
                 need -= (seg_len - seg_trav)
                 seg_idx += 1
                 seg_trav = 0.0
                 x0, y0, x1, y1, seg_len, ux, uy = segs[seg_idx]
 
-            seg_trav += max(0.0, need)
+            seg_trav += need
             x = x0 + ux * seg_trav
             y = y0 + uy * seg_trav
 
