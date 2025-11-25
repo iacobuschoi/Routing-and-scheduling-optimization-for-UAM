@@ -62,7 +62,7 @@ class PositionVector():
 
         return t_final, pos_vec
     
-    def collision_detect(self, otherPositionVector, minDist = 5, delta_t: float = 0.1):
+    def collision_detect(self, otherPositionVector, minDist = 1, delta_t: float = 0.1):
         
         def _dist(p, q):
             return math.hypot(p[0] - q[0], p[1] - q[1])

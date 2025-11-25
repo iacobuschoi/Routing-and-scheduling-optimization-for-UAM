@@ -22,7 +22,7 @@ class MWIS:
 
         for i in range(n-1):
             for j in range(i+1,n):
-                if positionVectorList[i].collisionDetect(positionVectorList[j]):
+                if positionVectorList[i].collision_detect(positionVectorList[j]):
                     edgeList.append([i,j])
 
         return edgeList

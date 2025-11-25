@@ -7,17 +7,27 @@ class Graph():
         self.build()
 
     def build(self):
-        print("===== build Graph =====")
-        V, E = map(int,input("[insert] V E: ").split()) # V: # of nodes, E: # of edges
+        # print("===== build Graph =====")
+        # V, E = map(int,input("[insert] V E: ").split()) # V: # of nodes, E: # of edges
         
-        print("\n[build Nodes]")
-        for _ in range(V):
-            self.insertNode(list(map(int, input("[insert] x y: ").split())))
+        # print("\n[build Nodes]")
+        # for _ in range(V):
+        #     self.insertNode(list(map(int, input("[insert] x y: ").split())))
 
-        print("\n[build Edges]")
-        for _ in range(E):
-            i, j = map(int, input("[insert] i j: ").split())
-            self.insertEdge(i, j)
+        # print("\n[build Edges]")
+        # for _ in range(E):
+        #     i, j = map(int, input("[insert] i j: ").split())
+        #     self.insertEdge(i, j)
+        
+        self.insertNode([0,1])
+        self.insertNode([1,1])
+        self.insertNode([2,2])
+        self.insertNode([-1,1])
+
+        self.insertEdge(0,2)
+        self.insertEdge(1,1)
+        self.insertEdge(1,2)
+        self.insertEdge(3,0)
         
         self.log()
 
